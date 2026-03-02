@@ -1,0 +1,9 @@
+.card { margin-top: 12px; padding: 14px; border: 1px solid #e5e7eb; border-radius: 12px; display: grid; gap: 10px; }
+.label span { display: block; font-weight: 600; margin-bottom: 6px; }
+input { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #cbd5e1; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn, .btn2, .btn3 { border: none; padding: 10px 12px; border-radius: 10px; cursor: pointer; color: white; }
+.btn { background: #1d4ed8; }
+.btn2 { background: #0f766e; }
+.btn3 { background: #334155; }
+.ok { color: #166534; font-weight: 600; }

@@ -1,0 +1,26 @@
+<h1>Album Detail</h1>
+
+<div *ngIf="loading">Loading album...</div>
+<div *ngIf="!loading && error" style="color:#b91c1c;">{{ error }}</div>
+
+<div *ngIf="!loading && album" class="card">
+  <div><b>ID:</b> {{ album.id }}</div>
+  <div><b>User ID:</b> {{ album.userid }}</div>
+
+  <label class="label">
+    <span>Title</span>
+    <!-- Если ngModel не работает, скажешь — сделаем без ngModel -->
+    <input [(ngModel)]="editedTitle" />
+  </label>
+
+  <div class="row">
+    <button class="btn" (click)="save()" [disabled]="saving">
+      {{ saving ? 'Saving...' : 'Save' }}
+    </button>
+
+    <button class="btn2" (click)="goToPhotos()">View Photos</button>
+    <button class="btn3" (click)="back()">Back</button>
+  </div>
+
+  <div *ngIf="success" class="ok">{{ success }}</div>
+</div>
